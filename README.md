@@ -6,12 +6,13 @@ Code associated with the paper **Two are Better Than One: Joint Entity and Relat
 
 ### Resources
 
-The pre-procssing scripts for the used datasets are still under construction, while should be done within one or two week;
+The datasets are available in "./datasets/".
+Due to copyright issue, we cannot directly release ACE datasets, and instead, their pre-processing scripts are put in "./datasets/".
 
 The word vectoers for each dataset are included in "./wv/";
 
 The contextualized word embeddings and attention weights are **not** included (since they are too big).
-We use library "transformers" and "flair" to generate them locally.
+We use library "transformers" and "flair" to generate them locally. Please refer to "./gens/gen\_\*.py".
 
 ### Model Related
 
