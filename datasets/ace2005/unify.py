@@ -11,6 +11,9 @@ for dataset_type in ['train', 'dev', 'test']:
         
         
 for dataset_type in ['train', 'dev', 'test']:
+    
+    dataset = eval(dataset_type)
+    
     exec(f'{dataset_type}_fine = []')
     dataset_fine = eval(f'{dataset_type}_fine')
     
@@ -48,6 +51,7 @@ for dataset_type in ['train', 'dev', 'test']:
             dataset_fine.append(item)
             
             bias += len(tokens)
+
 
 flag = 'ACE05'
 for dataset_type in ['train', 'dev', 'test']:

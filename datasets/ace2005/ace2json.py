@@ -90,7 +90,7 @@ def parseStanford(stanfordfn):
         
 def Ace2json(entity_dir, rel_dir, token_dict_offset1, token_dict_offset2, txtfn, docs, nercount, relcount, sentcount):
     fn = txtfn.split('/')[-1].replace('.split.txt','')
-    print fn
+    print(fn)
     fid = open(txtfn)
     text = fid.read()
     text = text.rstrip()
