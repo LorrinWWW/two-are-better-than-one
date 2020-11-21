@@ -211,7 +211,7 @@ model = ModelClass(config)
 
 if args.model_read_ckpt:
     print(f"reading params from {args.model_read_ckpt}")
-    model.load(args.model_read_ckpt)
+    model = model.load(args.model_read_ckpt)
     model.token_embedding.token_indexing.update_vocab = False
 elif args.token_emb_dim > 0 and args.pretrained_wv:
     print(f"reading pretrained wv from {args.pretrained_wv}")
