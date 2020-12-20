@@ -1,9 +1,10 @@
 import json
+import random
 
 for i in range(5):
     
     for dataset_type in ['train', 'dev', 'test']:
-        with open(f"./json/{dataset_type if dataset_type!='dev' else 'test'}{i}.json") as f:
+        with open(f"./json/{dataset_type if dataset_type!='dev' else 'test'}/{i}.json") as f:
             exec(f'{dataset_type} = []')
             dataset = eval(dataset_type)
             for line in f:

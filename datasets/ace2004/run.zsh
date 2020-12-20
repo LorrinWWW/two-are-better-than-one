@@ -1,7 +1,7 @@
 #!/bin/zsh
 # ace apf, sgm to ann, txt
 mkdir result
-for i in english/*/*.sgm
+for i in English/*/*.sgm
 do
     echo $i
     python3 ace2ann.py `echo $i | sed -e 's/.sgm/.apf.xml/g'` $i result/`basename $i .sgm`.txt >! result/`basename $i .sgm`.ann

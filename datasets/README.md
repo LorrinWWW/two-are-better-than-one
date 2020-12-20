@@ -35,10 +35,12 @@ cd ..
 
 Please set the environment variables for the directories, or directly put the directories in the following commands beforehand.
 
+(If you fail to run the following script, please first check the path. If you still cannot succeed or you have found a bug, you are welcome to open an issue and we will reply and fix it as soon as possible.)
+
 #### ACE 2004
 
 ```
-cp -r ${ACE2004_DIR}/*/english ace2004/
+cp -r ${ACE2004_DIR}/*/English ace2004/
 cd ace2004
 zsh run.zsh
 mkdir -p ./json/train
