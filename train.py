@@ -191,11 +191,14 @@ args = parser.parse_args()
 # In[5]:
 
 
-if args.device is not None:
+if args.device is not None and args.device != 'cpu':
     torch.cuda.set_device(args.device)
-else:
-    gpu_idx, gpu_mem = set_max_available_gpu()
-    args.device = f"cuda:{gpu_idx}"
+elif args.device is None:
+    if torch.cuda.is_available():
+        gpu_idx, gpu_mem = set_max_available_gpu()
+        args.device = f"cuda:{gpu_idx}"
+    else:
+        args.device = "cpu"
 
 
 # In[6]:
