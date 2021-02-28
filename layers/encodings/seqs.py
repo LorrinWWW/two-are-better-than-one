@@ -55,6 +55,9 @@ class LSTMEncoding(nn.Module):
             _, recover_idx = permIdx.sort(0, descending=False)
             sorted_seq_tensor = word_rep[permIdx]
             
+            # manually move 'sorted_seq_len' to cpu
+            sorted_seq_len = sorted_seq_len.cpu()
+            
             packed_words = pack_padded_sequence(sorted_seq_tensor, sorted_seq_len, True)
             lstm_out, (h, _) = self.rnn(packed_words, None)
             lstm_out, _ = pad_packed_sequence(lstm_out, batch_first=True)
@@ -105,6 +108,9 @@ class GRUEncoding(nn.Module):
             sorted_seq_len, permIdx = word_seq_lens.sort(0, descending=True)
             _, recover_idx = permIdx.sort(0, descending=False)
             sorted_seq_tensor = word_rep[permIdx]
+            
+            # manually move 'sorted_seq_len' to cpu
+            sorted_seq_len = sorted_seq_len.cpu()
             
             packed_words = pack_padded_sequence(sorted_seq_tensor, sorted_seq_len, True)
             lstm_out, h = self.rnn(packed_words, None)
