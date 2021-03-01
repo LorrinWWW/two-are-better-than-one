@@ -35,7 +35,7 @@ the macro-averaged F1 is calculated in *class JointTrainerMacroF1.\_get\_metrics
 - gpustat
 
 
-## Quick Start
+## Quick Start (Training)
 
 
 1. Generate contextualized embeddings (and attention weights)
@@ -88,6 +88,12 @@ the macro-averaged F1 is calculated in *class JointTrainerMacroF1.\_get\_metrics
     ```
     
     The defualt parameters above can be used to reproduce the results in the paper on ACE05.
+    
+## Quick Start (Inference on custom text)
+
+Please refer to [notebook inference](inference.ipynb).
+**Note: It is not rigorously tested, and thus may be buggy.** 
+If you encounter any issue, don't hesitate to report it.
     
 ## Training Arguments
 
