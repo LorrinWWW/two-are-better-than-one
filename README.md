@@ -2,6 +2,17 @@
 
 Code associated with the paper **Two are Better Than One: Joint Entity and Relation Extraction with Table-Sequence Encoders**, at EMNLP 2020
 
+If you find this code useful in your research, please consider citing:
+```bibtex
+@inproceedings{wang2020two,
+  title={Two Are Better than One: Joint Entity and Relation Extraction with Table-Sequence Encoders},
+  author={Wang, Jue and Lu, Wei},
+  booktitle={Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP)},
+  pages={1706--1721},
+  year={2020}
+}
+```
+
 ## Navi
 
 ### Resources
