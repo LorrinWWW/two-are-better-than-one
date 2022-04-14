@@ -17,9 +17,7 @@ from functions import *
 try:
     from allennlp.modules import ConditionalRandomField
 except Exception as e:
-    print("We adopt CRF implemented by allennlp, please install it first.")
-    raise e
-
+    print("Warn: we adopt CRF implemented by allennlp, please install it first before using CRF.")
 
 
 '''
